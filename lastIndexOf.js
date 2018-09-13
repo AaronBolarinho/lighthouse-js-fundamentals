@@ -103,10 +103,8 @@ console.log(lastIndexOf([], 3), "=?", -1);
 
 */
 
-function lastIndexOf([a, b, c, d, e], n) {
-  var myArray = [a, b, c, d, e];
+function lastIndexOf(myArray, n) {
   return (myArray.lastIndexOf(n));
-
 }
 
 console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 1), "=?", 3);

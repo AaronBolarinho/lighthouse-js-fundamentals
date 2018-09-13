@@ -35,15 +35,13 @@ console.log(array);
 
 //This is working; same logic as solution to lastIndexOf.js
 
-function concat([a, b, c], [d, e, f]) {
-  var arrayOne = [a, b, c];
-  var arrayTwo = [d, e, f];
+function concat(arrayOne, arrayTwo) {
   var arrayThree = arrayOne.concat(arrayTwo);
   for(var i = arrayThree.length - 1; i >= 0; i--) {
     if(arrayThree[i] === undefined) {
-       arrayThree.splice(i, 1);
+      arrayThree.splice(i, 1);
     }
-}
+  }
   return arrayThree;
 }
 
