@@ -1,3 +1,19 @@
+//This is working; same logic as solution to lastIndexOf.js
+
+function concat(arrayOne, arrayTwo) {
+  var arrayThree = arrayOne.concat(arrayTwo);
+  for(var i = arrayThree.length - 1; i >= 0; i--) {
+    if(arrayThree[i] === undefined) {
+      arrayThree.splice(i, 1);
+    }
+  }
+  return arrayThree;
+}
+
+console.log(concat([ 1, 2, 3 ], [ 4, 5, 6 ]), "=?", [ 1, 2, 3, 4, 5, 6 ]);
+console.log(concat([ 0, 3, 1 ], [ 9, 7, 2 ]), "=?", [ 0, 3, 1, 9, 7, 2 ]);
+console.log(concat([], [ 9, 7, 2 ]), "=?", [ 9, 7, 2 ]);
+console.log(concat([ 5, 10 ], []), "=?", [ 5, 10 ]);
 
 /*var hege = ["Cecilie", "Lone"];
 var stale = ["Emil", "Tobias", "Linus"];
